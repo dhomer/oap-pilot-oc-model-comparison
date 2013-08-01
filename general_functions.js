@@ -30,7 +30,7 @@ var OCDATAVIS = function(options) {
 
     function getQuestionColor(question) {
         var qc = questionColor;
-        if (question.hasmap === "True") {
+        if (question.hasmap === true) {
             qc = "#6FA2FF";
         }
         if (!question.hasOwnProperty('hasmap')) {
