@@ -1,0 +1,39 @@
+html {
+    background: gray;
+    font-family: "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
+    font-size: 14px;
+}
+body {
+    width: 80%;
+    min-width: 1250px;
+    margin: auto;
+    padding: 1.5em;
+    background: white;
+}
+svg {
+    margin: .5em 1.5em 0 1.5em;
+}
+.overlayed > svg {
+    display: absolute;
+    top: 0;
+    left: 0;
+}
+pre {
+    height: 600px;
+    overflow: auto;
+    color: #268bd2;
+    background-color: #fdf6e3;
+    margin: 0;
+    padding: .5em;
+}
+pre, text {font-size: .9em;}
+.key {color: #859900}
+.string {color: #2aa198}
+.title {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+rect:hover {opacity: 0.5;}
+h3 {
+    margin-bottom:0px;
+}
