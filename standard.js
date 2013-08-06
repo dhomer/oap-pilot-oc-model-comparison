@@ -185,7 +185,7 @@
 						"endDate": "The date on which contract work ends.",
 						"contractDocumentId": "A foreign key ID linking to one of the document objects described below."
 				},
-				"location": {
+				"location": [{
 						"geoNameId": "The location id number from the Geonames.org gazetteer.",
 						"latitude": "Latitude coordinate for the point in decimal degrees (WGS 1984)",
 						"longitude": "Longitude coordinates for the point in decimal degrees (WGS 1984)",
@@ -195,14 +195,14 @@
 						"adm1Code": "Unique ID code of the 1st level administrative sub-division where the where the location is situated.",
 						"adm2Name": "Name of the 2nd level administrative sub-division where the location is situated.",
 						"adm2Code": "Unique ID code of the 2nd level administrative sub-division where the location is situated."
-				},
-				"document": {
+				}],
+				"document": [{
 						"id": "A primary key for each document which allows it to be referenced elsewhere in the data model.",
 						"link": "A link to the document.",
 						"origin": "The source of the document (e.g. public website, e-procurement portal, etc.)",
 						"type": "The document type (e.g. tender notice, contract, etc.)",
 						"numPages": "The number of pages in the document."
-				}
+				}]
 		}
 
     var str = JSON.stringify(ocActivity, undefined, 4);
