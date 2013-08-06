@@ -1,6 +1,6 @@
 (function () {
-    function output(inp) {
-        var placeholder = document.getElementById('standard');
+    function output(inp, divName) {
+        var placeholder = document.getElementById(divName);
         placeholder.appendChild(document.createElement('pre')).innerHTML = inp;
     }
 
@@ -149,7 +149,64 @@
             }]
         }
     }
+		
+		var draftModel = {
+				"projectMeta": {
+						"developmentPartnerProjectId": "The unique project ID number used by the development partner funding the project.",
+						"aimsProjectId": "The unique project ID number used by the government in their aid information management system.",
+						"developmentPartnerName": "Name of the development partner funding the project.",
+						"projectTitle": "Title of the project.",
+						"sector": "Simple project sector based on a limited code list for the pilot.",
+						"aimsSector": "Project sector based on the government's aid information management system",
+						"projectDescription": "Free text description of the project.",
+						"partnerMinistry": "Government ministry implementing the project.",
+						"partnerDepartment": "Government department implementing the project.",
+						"projectStartDate": "Start date of the project.",
+						"projectEndDate": "End date of the project.",
+						"totalCommitment": "Total financial commitment to the project (USD)",
+						"totalDisbursement": "Total financial disbursements to the project (USD)",
+						"projectDataSource": "Source of project data (AMP or donor website)"
+				},
+				"contractMeta": {
+						"contractTitle": "An overall title describing the particular procurement process. (e.g. 'Construction of Shani Bheri Phalamegaunda Bridge')",
+						"contractDescription": "A detailed description of the procurement process.",
+						"procurementCategory": "The category of procurement (e.g. goods, public works, etc.)"
+				},
+				"bid": {
+						"tenderNoticeDocumentId": "A foreign key ID linking to one of the document objects described below."
+				},
+				"award": {
+						"contractorName": "The name of the contractor or supplier.",
+						"contractorCountry": "The country where the contractor is located.",
+						"awardAmount": "The amount of the award (in any currency.",
+						"awardAmountCurrency": "The currency of the contract award.",
+						"dateOfAward": "The date on which the contract was awarded.",
+						"startDate": "The date on which contract work starts.",
+						"endDate": "The date on which contract work ends.",
+						"contractDocumentId": "A foreign key ID linking to one of the document objects described below."
+				},
+				"location": {
+						"geoNameId": "The location id number from the Geonames.org gazetteer.",
+						"latitude": "Latitude coordinate for the point in decimal degrees (WGS 1984)",
+						"longitude": "Longitude coordinates for the point in decimal degrees (WGS 1984)",
+						"precision": "Precision code for the point according to UCDP/IATI coding system",
+						"locationName": "Name of the location from geonames.org",
+						"adm1Name": "Name of the 1st level administrative sub-division where the location is situated.",
+						"adm1Code": "Unique ID code of the 1st level administrative sub-division where the where the location is situated.",
+						"adm2Name": "Name of the 2nd level administrative sub-division where the location is situated.",
+						"adm2Code": "Unique ID code of the 2nd level administrative sub-division where the location is situated."
+				},
+				"document": {
+						"id": "A primary key for each document which allows it to be referenced elsewhere in the data model.",
+						"link": "A link to the document.",
+						"origin": "The source of the document (e.g. public website, e-procurement portal, etc.)",
+						"type": "The document type (e.g. tender notice, contract, etc.)",
+						"numPages": "The number of pages in the document."
+				}
+		}
 
     var str = JSON.stringify(ocActivity, undefined, 4);
-    output(syntaxHighlight(str));
+    output(syntaxHighlight(str),'draftStandard');
+		str = JSON.stringify(draftModel, undefined,4);
+		output(sytaxHighlight(str), 'pilotModel');
 })();
