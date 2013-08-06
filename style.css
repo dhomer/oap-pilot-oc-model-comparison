@@ -3,11 +3,17 @@ html {
     font-family: "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
     font-size: 14px;
 }
+.overflow {
+	overflow:auto;
+	webkit-overflow-scrolling:touch;
+}
+.container {
+	margin:auto;
+	width:80%;
+	max-width:1300px;
+	padding:10px;
+}
 body {
-    width: 80%;
-    min-width: 1250px;
-    margin: auto;
-    padding: 1.5em;
     background: white;
 }
 svg {
@@ -20,7 +26,6 @@ svg {
 }
 pre {
     height: 600px;
-    overflow: auto;
     color: #268bd2;
     background-color: #000000;
     margin: 0 3% 0 3%;
