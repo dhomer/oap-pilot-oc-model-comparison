@@ -9,10 +9,11 @@ html {
 	margin:auto;
 	width:80%;
 	max-width:1300px;
-	border-radius:10px;
+	
 }
 body {
     background: white;
+		border-radius:10px;
 }
 svg {
     margin: .5em 1.5em 0 1.5em;
@@ -29,6 +30,8 @@ pre {
     margin: 0 3% 0 3%;
 		border-radius:10;
     padding: .5em;
+		overflow:auto;
+		webkit-overflow-scrolling:touch;
 }
 pre, text {font-size: .9em;}
 .key {color: #859900}

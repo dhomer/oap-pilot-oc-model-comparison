@@ -2,7 +2,6 @@
     function output(inp, divName) {
         var placeholder = document.getElementById(divName);
         placeholder.appendChild(document.createElement('pre')).innerHTML = inp;
-				document.getElementsByTagName('pre').className('overflow');
     }
 
     function syntaxHighlight(json) {
