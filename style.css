@@ -1,17 +1,15 @@
 html {
-    background: gray;
+    background: grey;
     font-family: "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
     font-size: 14px;
 }
-.overflow {
-	overflow:auto;
-	webkit-overflow-scrolling:touch;
-}
+
 .container {
+	padding:40 20 20 20;
 	margin:auto;
 	width:80%;
 	max-width:1300px;
-	padding:10px;
+	border-radius:10px;
 }
 body {
     background: white;
@@ -42,4 +40,8 @@ pre, text {font-size: .9em;}
 rect:hover {opacity: 0.5;}
 h3 {
     margin-bottom:0px;
+}
+.overflow {
+	overflow:auto;
+	webkit-overflow-scrolling:touch;
 }
